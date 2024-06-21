@@ -1,0 +1,549 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi","Hii",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Hi there",
+        "How are you",
+        "Is anyone there?",
+        "Hey","Hola", "Hello", "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for asking",
+        "Good to see you again",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye",
+      "Nice chatting to you, bye", "Till next time"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!",
+        "Awesome, thanks", "Thanks for helping me"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "items",
+      "patterns": [
+        "Which items do you have?",
+        "What kinds of items are there?",
+        "What do you sell?"
+      ],
+      "responses": ["We sell garments and electronics" ]
+    },
+  
+    {"tag": "noanswer",
+    "patterns": [],
+    "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+    "context": [""]
+    },
+
+    {"tag": "options",
+    "patterns": ["How you could help me?", "What help you provide?", "How you can be helpful?"],
+    "responses": ["I can guide you through  problems like order tracking, person to be contacted ",
+    "I can provide support related to following problems technical query,management related query,order related query,tracking related query,procurement query"],
+    "context": [""]
+    },
+
+    {"tag": "order_tracking",
+    "patterns": ["where is order with id 4367?", "track order 56278", "Where is my order with id 561A24?" ],
+    "responses": ["Delayed","Dispatched","On the Way!"],
+    "context": [""]
+    },
+
+    {"tag": "order_components",
+    "patterns": ["order id 345A23 comprises of?","List of components"],
+    "responses": ["order comprises of Smart watch and Headset"],
+    "context": [""]
+    },
+
+    {"tag": "missing_id",
+    "patterns": ["where is the order","where is my order","locate the order","Delivery date of order"],
+    "responses": ["Please enter with order ID"],
+    "context": [""]
+    },
+
+    {"tag": "Location",
+    "patterns": ["find order location 32712","What is the Location of order 2331?"],
+    "responses": ["It is in Pune","It is in Delhi","It has reached Mumbai","It has reached Banglore"],
+    "context": [""]
+    },
+
+    {"tag": "forgot_password",
+    "patterns": ["I forgot my Login password?","what to do when someone forgets Login password?","I forgot my Laptop password","Forgot Wifi password"],
+    "responses": ["Please enter your email id ,we will send a link on your email"],
+    "context": [""]
+    },
+    {"tag": "email_id",
+    "patterns":["abx@gmail.com","abc@kiit.ac.in"],
+    "responses":["Link has been shared.Please change your password"],
+    "context": [""]
+    },
+
+    {"tag": "name",
+    "patterns": ["what is your name?","what should I call you?"],
+    "responses": ["I'm IntelliChat","Hey!I'm IntelliChat"],
+    "context": [""]
+    },
+
+    {"tag": "customer_satisfaction",
+    "patterns": ["how was the customer response","Is the customer happy?","what was the customer feedback?"],
+    "responses": ["You can give your valuable feedback with the form below.Here is the link: https://docs.google.com/forms/d/e/1FAIpQLSfH9LjYo8ZYkVSYvahNUSsIAdZiPcDgyWNL33V8jHTT1ZO76w/viewform?usp=sf_link "],
+    "context": [""]
+    },
+
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?"
+      ],
+      "responses": [
+        "Delivery takes 2-4 days",
+        "Shipping takes 2-4 days"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    }
+    ,
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! How may I help you?", "Hey! How can I assist you?"]
+    },
+    {
+      "tag": "product_inquiry",
+      "patterns": ["Do you have iphone 14?", "Can you tell me about iphone 14?", "What can you tell me about iphone 14?"],
+      "responses": ["Yes, we have Iphone 14. It's a 512 gb model. The price is 1.5 Lack.", "Iphone 14 is available. It's a 8 gb ram. The price is 1.5 lack."]
+    },
+    {
+      "tag": "order_status",
+      "patterns": ["What's the status of my order?", "Can you check my order status?", "Where is my package?"],
+      "responses": ["Please provide your order number, and I'll check the status for you.", "Sure, I can help you with that. Please provide your order number."]
+    },
+    {
+      "tag": "order_status_check",
+      "patterns": ["My order number is 1234"],
+      "responses": ["Thank you for providing your order number. Let me check the status for you.", "Alright, let me find the status of order number {12345}."]
+    },
+    {
+      "tag": "order_status_info",
+      "patterns": ["When will my order be delivered?", "How long until my package arrives?", "Can you provide an estimated delivery date?"],
+      "responses": ["The estimated delivery date for your order is 20 may.", "Your package is expected to arrive on 25 may."]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": ["What payment methods do you accept?", "Can I pay with credit card?", "Do you support PayPal payments?"],
+      "responses": ["We accept multiple payment methods, including credit cards and PayPal.", "Yes, you can pay with credit card or PayPal."]
+    },
+    {
+      "tag": "thank_you",
+      "patterns": ["Thank you", "Thanks a lot", "Appreciate your help"],
+      "responses": ["You're welcome! If you have any more questions, feel free to ask.", "You're welcome! Let me know if there's anything else I can assist you with."]
+    },
+    {
+      "tag": "fallback",
+      "patterns": ["Sorry, I didn't get that.", "Can you please repeat that?", "I'm not sure I understand."],
+      "responses": ["I apologize, but I'm having trouble understanding. Could you please rephrase your question?", "I'm sorry, I couldn't grasp that. Can you please provide more details?"]
+    },
+    {
+      "tag": "shipping_information",
+      "patterns": ["How much is the shipping fee?", "Do you offer free shipping?", "How long does shipping take?"],
+      "responses": ["The shipping fee depends on your location and the size of the package. Could you please provide your address?", "Yes, we offer free shipping for orders above {free_shipping_threshold}. Shipping usually takes {shipping_time}."]
+    },
+    {
+      "tag": "account_creation",
+      "patterns": ["How can I create an account?", "Do I need to register to place an order?", "Can I checkout as a guest?"],
+      "responses": ["To create an account, click on the 'Sign Up' button on the top right corner of our website.", "Registering an account is not mandatory, but it allows you to track your orders and save your preferences."]
+    },
+    {
+      "tag": "order_cancelation",
+      "patterns": ["Can I cancel my order?", "How do I cancel an order?", "Is it possible to cancel my order?"],
+      "responses": ["Yes, you can cancel your order within 7 of placing it. Please provide your order number for assistance.", "Order cancelation is possible as long as it's within the 7 timeframe. Could you provide your order number?"]
+    },
+    {
+      "tag": "order_cancelation_process",
+      "patterns": ["I want to cancel my order with number 12345", "Please cancel my order 12345"],
+      "responses": ["I'm sorry to hear that you want to cancel order number 12345. Let me assist you with the cancelation process.", "Sure, I'll help you cancel order number 12345. Give me a moment."]
+    },
+    {
+      "tag": "order_cancelation_confirmation",
+      "patterns": ["Yes, please cancel it.", "Confirm the cancelation.", "Cancel the order."],
+      "responses": ["Your order 12345 has been successfully canceled.", "The cancelation of order 12345 is confirmed."]
+    },
+    {
+      "tag": "order_cancelation_failure",
+      "patterns": ["I changed my mind, I don't want to cancel it.", "Actually, I'd like to keep my order.", "Can you restore my canceled order?"],
+      "responses": ["I apologize for any confusion. Your order 12345 is not canceled and will be processed as usual.", "No problem! Your order 12345 remains active and will be processed."]
+    },
+    {
+      "tag": "return_policy",
+      "patterns": ["What is your return policy?", "How can I return a product?", "Do you offer refunds?"],
+      "responses": ["Our return policy allows returns within 7 of purchase. Please review our return policy page on our website for more details.", "Yes, we have a return policy that provides refunds within 7 of purchase. Check our website for more information."]
+    },
+    {
+      "tag": "order_return_process",
+      "patterns": ["I want to return my order with number 12345", "Please initiate a return for order 12345"],
+      "responses": ["I'm sorry to hear that you want to return order number 12345. Let me assist you with the return process.", "Sure, I'll help you initiate a return for order number 12345. Give me a moment."]
+    },
+    {
+      "tag": "order_return_confirmation",
+      "patterns": ["Yes, please proceed with the return.", "Confirm the return.", "Initiate the return process."],
+      "responses": ["Your return for order 12345 has been successfully initiated. Please follow the instructions provided via email.", "The return process for order 12345 is confirmed. You'll receive an email with further instructions."]
+    },
+    {
+      "tag": "order_return_failure",
+      "patterns": ["I changed my mind, I don't want to return it.", "Actually, I'd like to keep the product.", "Can you cancel my return request?"],
+      "responses": ["I apologize for any confusion. Your return request for order {12345} is canceled.", "No problem! Your return request for order {12345} is canceled."]
+    },
+    {
+      "tag": "discounts",
+      "patterns": ["Are there any discounts available?", "Can I get a discount code?", "Do you offer promotions?"],
+      "responses": ["Yes, we have periodic promotions and discounts. Make sure to check our website and subscribe to our newsletter for the latest deals.", "We frequently offer discounts and promotions. Stay tuned to our website and newsletter for updates."]
+    },
+    {
+      "tag": "discount_code_usage",
+      "patterns": ["How can I use a discount code?", "Where do I enter the discount code?", "Can you guide me through applying a discount code?"],
+      "responses": ["During the checkout process, you'll find a field to enter the discount code. Simply enter the code there and click 'Apply'.", "When you proceed to checkout, you'll see an option to enter your discount code. Enter it and click 'Apply' to avail the discount."]
+    },
+    {
+      "tag": "discount_code_invalid",
+      "patterns": ["The discount code is not working.", "The code is invalid.", "Why isn't my discount code applied?"],
+      "responses": ["I apologize for the inconvenience. Please double-check the code for accuracy and ensure it's still valid. If the problem persists, please contact our support team.", "I'm sorry to hear that. Please ensure that the code is entered correctly and meets the requirements. If you're still experiencing issues, feel free to reach out to our support team."]
+    },
+    {
+      "tag": "order_modification",
+      "patterns": ["Can I modify my order?", "How do I make changes to my order?", "Is it possible to edit my order?"],
+      "responses": ["Yes, you can modify your order if it hasn't been shipped yet. Please provide your order number and let me know the changes you'd like to make.", "Order modifications are possible as long as the order hasn't been shipped. Please share your order number and the changes you'd like to implement."]
+    },
+    {
+      "tag": "order_modification_process",
+      "patterns": ["I want to modify my order with number 12345", "Please make changes to order 12345"],
+      "responses": ["I'm sorry to hear that you want to modify order number 12345. Let me assist you with the modification process.", "Sure, I'll help you modify order number 12345. Give me a moment."]
+    },
+    {
+      "tag": "order_modification_confirmation",
+      "patterns": ["Yes, please proceed with the modifications.", "Confirm the order modifications.", "Make the necessary changes to my order."],
+      "responses": ["Your requested modifications for order 12345 have been successfully made.", "The changes to your order 12345 have been updated."]
+    },
+    {
+      "tag": "order_modification_failure",
+      "patterns": ["I changed my mind, I don't want to modify it.", "Actually, I'd like to keep my order as it is.", "Can you cancel my modification request?"],
+      "responses": ["I apologize for any confusion. Your modification request for order 12345 is canceled, and the order will be processed as originally placed.", "No problem! Your modification request for order 12345 is canceled, and your order will be processed as originally placed."]
+    },
+    {
+      "tag": "out_of_stock",
+      "patterns": ["Is Macbook currently in stock?", "Do you have Macbook available?", "Can I purchase Macbook right now?"],
+      "responses": ["I'm sorry, but Macbook is currently out of stock. Would you like to be notified when it becomes available again?", "Unfortunately, Macbook is out of stock at the moment. Would you like to explore alternative options or be notified when it's back in stock?"]
+    },
+    {
+      "tag": "back_in_stock_notification",
+      "patterns": ["Yes, please notify me when {product_name} is back in stock.", "Notify me when {product_name} becomes available.", "I'd like to receive a notification for {product_name}."],
+      "responses": ["Sure! We'll notify you via email when {product_name} is back in stock. Thank you for your interest.", "Noted! We'll send you an email as soon as {product_name} is available again."]
+    },
+    {
+      "tag": "account_deletion",
+      "patterns": ["How can I delete my account?", "Is it possible to remove my account?", "Can you guide me through the account deletion process?"],
+      "responses": ["To delete your account, please contact our support team or navigate to the account settings page for further assistance.", "Account deletion requests are handled by our support team. Please reach out to them, and they'll guide you through the process."]
+    },
+    {
+      "tag": "account_deletion_confirmation",
+      "patterns": ["Yes, please proceed with the account deletion.", "Confirm the account deletion.", "Delete my account."],
+      "responses": ["Your account has been successfully deleted. We're sorry to see you go.", "Your account has been deleted as per your request. If you change your mind, feel free to create a new account."]
+    },
+    {
+      "tag": "account_deletion_failure",
+      "patterns": ["I changed my mind, I don't want to delete my account.", "Actually, I'd like to keep my account.", "Can you cancel my account deletion request?"],
+      "responses": ["I apologize for any confusion. Your account deletion request has been canceled.", "No problem! Your account deletion request has been canceled, and your account remains active."]
+    },
+    {
+      "tag": "shipping_address_change",
+      "patterns": ["How can I change my shipping address?", "Can I update my delivery address?", "Is it possible to modify my shipping address?"],
+      "responses": ["You can change your shipping address by accessing your account settings or by contacting our support team. Please provide your order number for assistance.", "To update your shipping address, please visit your account settings or get in touch with our support team. If you have an order number, please provide it for faster assistance."]
+    },
+    {
+      "tag": "shipping_address_change_process",
+      "patterns": ["I want to change the shipping address for order 12345", "Please update the delivery address for order {12345}"],
+      "responses": ["I'm sorry to hear that you want to change the shipping address for order number {12345}. Let me assist you with the process.", "Sure, I'll help you change the shipping address for order number {12345}. Give me a moment."]
+    },
+    {
+      "tag": "shipping_address_change_confirmation",
+      "patterns": ["Yes, please proceed with the address change.", "Confirm the shipping address update.", "Update the delivery address."],
+      "responses": ["The shipping address for order 12345 has been successfully updated to {new_shipping_address}.", "The delivery address for order {12345} has been changed to {new_shipping_address}."]
+    },
+    {
+      "tag": "shipping_address_change_failure",
+      "patterns": ["I changed my mind, I don't want to change my shipping address.", "Actually, I'd like to keep my current address.", "Can you cancel my shipping address change request?"],
+      "responses": ["I apologize for any confusion. Your shipping address change request for order {12345} has been canceled, and the original address will be used.", "No problem! Your shipping address change request for order {12345} has been canceled, and the original address will be used."]
+    },
+    {
+      "tag": "order_tracking",
+      "patterns": ["How can I track my order?", "Where can I find the tracking information?", "Do you provide order tracking?"],
+      "responses": ["To track your order, please visit the 'Order Tracking' page on our website and enter your order number and email address.", "Yes, we provide order tracking. You can find the tracking information by visiting the 'Order Tracking' section on our website and entering your order number and email address."]
+    },
+    {
+      "tag": "order_tracking_process",
+      "patterns": ["I want to track my order with number {12345}", "Please provide the tracking information for order {12345}"],
+      "responses": ["I'm sorry to hear that you're having trouble tracking order number {12345}. Let me assist you with that.", "Sure, I'll help you track order number {12345}. Give me a moment."]
+    },
+    {
+      "tag": "order_tracking_info",
+      "patterns": ["Can you provide the current status of my order?", "Where is my order currently?", "What's the latest update on my package?"],
+      "responses": ["Let me check the current status of your order and provide you with the latest tracking information. Please wait a moment.", "I'll find the most recent update on your order and share the tracking details with you. Give me a moment."]
+    },
+    {
+      "tag": "order_tracking_info_provided",
+      "patterns": ["Your order {12345} is currently {order_status}. The estimated delivery date is {delivery_date}.", "According to our records, your order {12345} is {order_status} and should arrive on {delivery_date}."],
+      "responses": ["Based on our tracking system, your order {12345} is currently {order_status}. The estimated delivery date is {delivery_date}.", "According to the latest information, your order {12345} is {order_status}. It is expected to be delivered on {delivery_date}."]
+    },
+    {
+      "tag": "order_tracking_info_unavailable",
+      "patterns": ["I can't find any information about my order.", "The tracking details don't show up.", "Why isn't the tracking information available?"],
+      "responses": ["I apologize for the inconvenience. It seems that the tracking information for your order is not currently available. Please contact our support team for further assistance.", "I'm sorry for the inconvenience. It appears that the tracking details for your order are not immediately accessible. Please reach out to our support team, and they'll provide you with the necessary information."]
+    },
+    {
+      "tag": "order_tracking_link",
+      "patterns": ["Here is the tracking link for your order: {tracking_link}", "You can track your order using this link: {tracking_link}", "Click on this link to track your order: {tracking_link}"],
+      "responses": ["Here is the tracking link for your order: {tracking_link}. By visiting this link, you can track the progress of your order.", "To track your order, please click on this link: {tracking_link}. It will take you to the tracking page, where you can view the current status."]
+    },
+    {
+      "tag": "delivery_issues",
+      "patterns": ["There is an issue with my delivery.", "My package hasn't arrived.", "The delivery of my order is delayed."],
+      "responses": ["I apologize for the inconvenience. Please provide your order number, and I'll look into the issue with the delivery.", "I'm sorry to hear that. To assist you further, could you please share your order number so that I can investigate the issue with the delivery?"]
+    },
+    {
+      "tag": "delivery_issues_resolution",
+      "patterns": ["What can be done to resolve the delivery issue?", "How will you handle the delayed delivery?", "Can you provide a solution for my package not arriving?"],
+      "responses": ["I understand your concern. Let me investigate the delivery issue and provide you with the best possible solution. Please allow me a moment.", "I apologize for the inconvenience caused by the delayed delivery. I'll look into it and find the appropriate resolution for you. Give me a moment, please."]
+    },
+    {
+      "tag": "delivery_issues_resolved",
+      "patterns": ["I'm glad to inform you that the delivery issue has been resolved.", "We have successfully resolved the problem with your delivery.", "The necessary actions have been taken to address the delivery issue."],
+      "responses": ["I'm happy to inform you that the delivery issue has been resolved, and your package should arrive soon.", "Good news! We have taken the necessary steps to address the delivery issue, and your package should be delivered shortly."]
+    },
+    {
+      "tag": "delivery_issues_assistance",
+      "patterns": ["I need assistance with my delivery issue.", "Can you help me with my delayed delivery?", "What should I do if my package doesn't arrive?"],
+      "responses": ["Of course! I'm here to help. Please provide your order number and any additional details regarding the delivery issue, and I'll assist you in resolving it.", "I'll do my best to assist you with your delayed delivery. To get started, please share your order number and any other relevant information about the issue."]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": ["What payment methods do you accept?", "Can I pay with Cards?", "Do you support cash on delivery payments?"],
+      "responses": ["We accept a variety of payment methods, including credit cards, debit cards, PayPal, and more. Please check our website's payment options section for the complete list.", "Yes, we support {payment_method} payments, along with other popular payment methods like credit cards, debit cards, and PayPal."]
+    },
+    {
+      "tag": "payment_issues",
+      "patterns": ["I'm having trouble with my payment.", "My payment is not going through.", "Why was my payment declined?"],
+      "responses": ["I apologize for the inconvenience. Payment issues can occur for various reasons. Please ensure that the payment details are correct, and if the problem persists, contact your bank or our support team for further assistance.", "I'm sorry to hear that. Payment issues can arise due to different factors. Please double-check your payment information, and if the problem continues, reach out to your bank or our support team for further guidance."]
+    },
+    {
+      "tag": "order_confirmation",
+      "patterns": ["How will I receive my order confirmation?", "Will I get an email confirmation for my order?", "How can I know if my order is confirmed?"],
+      "responses": ["Once your order is confirmed, you will receive an email confirmation with the order details and tracking information, if available. Please check your email inbox and spam folder.", "Yes, you will receive an email confirmation for your order. It will contain the order details and, if applicable, the tracking information. Please keep an eye on your email inbox, including the spam folder."]
+    },
+    {
+      "tag": "order_cancellation",
+      "patterns": ["Can I cancel my order?", "How do I cancel my order?", "Is it possible to request an order cancellation?"],
+      "responses": ["Yes, you can cancel your order if it hasn't been shipped yet. Please provide your order number, and I'll assist you with the cancellation process.", "Order cancellations are possible as long as the order hasn't been shipped. To proceed with the cancellation, please share your order number."]
+    },
+    {
+      "tag": "order_cancellation_process",
+      "patterns": ["I want to cancel order 12345", "Please cancel my order with number 12345"],
+      "responses": ["I'm sorry to hear that you want to cancel order number 12345. Let me assist you with the cancellation process.", "Sure, I'll help you cancel order number {12345}. Give me a moment."]
+    },
+    {
+      "tag": "order_cancellation_confirmation",
+      "patterns": ["Yes, please proceed with the cancellation.", "Confirm the order cancellation.", "Cancel my order."],
+      "responses": ["Your order 12345 has been successfully canceled. If any payment was made, it will be refunded shortly.", "The cancellation request for order {123,14526,15578} has been processed. Any payment made will be refunded within a few business days."]
+    },
+    {
+      "tag": "order_cancellation_failure",
+      "patterns": ["I changed my mind, I don't want to cancel my order.", "Actually, I'd like to keep my order.", "Can you cancel my cancellation request?"],
+      "responses": ["I apologize for any confusion. Your cancellation request for order {12345} has been canceled, and the order will be processed as planned.", "No problem! Your cancellation request for order {12345,123568} has been canceled, and your order will be processed as originally placed."]
+    },
+    {
+      "tag": "return_policy",
+      "patterns": ["What is your return policy?", "How can I return a product?", "Do you accept returns?"],
+      "responses": ["Our return policy allows returns within {3} days of purchase. Please visit our website's 'Returns' page for detailed instructions and to initiate a return.", "Yes, we accept returns within {3,4,5} days of purchase. To initiate a return and learn more about our return policy, please visit our website's 'Returns' page."]
+    },
+    {
+      "tag": "return_process",
+      "patterns": ["I want to return a product.", "How can I initiate a return?", "Please guide me through the return process."],
+      "responses": ["To initiate a return, please visit our website's 'Returns' page and follow the provided instructions. If you need any further assistance, feel free to contact our support team.", "Sure! You can initiate a return by visiting our website's 'Returns' page. There, you'll find detailed instructions on how to proceed. If you have any questions, our support team is ready to help."]
+    },
+    {
+      "tag": "return_status",
+      "patterns": ["What is the status of my return?", "Has my return been processed?", "When will I receive my refund for the returned product?"],
+      "responses": ["Let me check the status of your return and provide you with an update. Please wait a moment.", "I'll find the most recent information regarding your return and refund status. Give me a moment to fetch that for you."]
+    },
+    {
+      "tag": "return_status_info",
+      "patterns": ["Your return for order 12345 has been received and is currently being processed. The refund will be issued within 3 days.", "According to our records, your return for order 12345 has been received and is being processed. You can expect to receive the refund within 5 days."],
+      "responses": ["Based on our records, your return for order 12345 has been received and is currently being processed. The refund will be issued within 4 days.", "According to the latest information, your return for order 12345 has been received and is being processed. The refund will be issued within {4,3,2} days."]
+    },
+    {
+      "tag": "return_status_unavailable",
+      "patterns": ["I don't have any information about the status of my return.", "I'm unsure if my return has been processed.", "Why can't I find the return status?"],
+      "responses": ["I apologize for the inconvenience. It seems that the status of your return is not currently available in our system. Please contact our support team for further assistance.", "I'm sorry for the inconvenience. It appears that the information about the status of your return is not immediately accessible. Please reach out to our support team, and they'll provide you with the necessary updates."]
+    },
+    {
+      "tag": "return_confirmation",
+      "patterns": ["I have received the confirmation of my return.", "I got an email confirming my return.", "I've been informed that my return has been received."],
+      "responses": ["That's great to hear! Once your return is processed, the refund will be issued according to our return policy. If you have any further questions, feel free to ask.", "Excellent! Once the return is fully processed, the refund will be issued based on our return policy. If you have any more questions, please let me know."]
+    },
+    {
+      "tag": "product_recommendation",
+      "patterns": ["Can you recommend a product for me?", "I need some product recommendations.", "What products do you suggest?"],
+      "responses": ["Of course! I'd be happy to help you with product recommendations. Could you please provide me with some details about your preferences or the type of product you're looking for?", "Certainly! To provide you with accurate product recommendations, I'll need a bit more information about your preferences or the type of product you're interested in. Please let me know."]
+    },
+    {
+      "tag": "product_recommendation_process",
+      "patterns": ["I'm looking for a {product_type} with {specific_features}.", "I need a {product_type} that is {specific_features}.", "Can you recommend a {product_type} with {specific_features}?"],
+      "responses": ["Sure! I'll find you a {product_type} that matches your specified features. Give me a moment to search our inventory.", "I'll help you find a {product_type} that meets your requirements. Let me check our product catalog for suitable options. Please wait a moment."]
+    },
+    {
+      "tag": "product_recommendation_results",
+      "patterns": ["Based on your preferences, I recommend {product_name}.", "I found {product_name} that matches your requirements.", "Here's a {product_name} that you might like."],
+      "responses": ["Based on your preferences, I recommend {product_name}. It has {product_features} and excellent customer reviews.", "I found {product_name} that matches your requirements. It offers {product_features} and has received positive feedback from customers. Check it out!"]
+    },
+    {
+      "tag": "product_comparison",
+      "patterns": ["Can you compare {product_name1} and {product_name2}?", "What are the differences between {product_name1} and {product_name2}?", "Which {product_name} is better: {product_name1} or {product_name2}?"],
+      "responses": ["Certainly! I'll compare {product_name1} and {product_name2} for you. Give me a moment to gather the necessary information.", "Sure! Let me provide you with a comparison between {product_name1} and {product_name2}. Just a moment while I gather the details."]
+    },
+    {
+      "tag": "product_comparison_results",
+      "patterns": ["Based on the comparison, {product_name1} offers {advantages1} compared to {product_name2}.", "{product_name1} has {advantages1} over {product_name2}.", "In terms of {feature}, {product_name1} is superior to {product_name2}."],
+      "responses": ["Based on the comparison, {product_name1} offers {advantages1} compared to {product_name2}. It has {features1} that make it stand out.", "{product_name1} has {advantages1} over {product_name2}. It excels in {features1} that provide a better user experience.", "When it comes to {feature}, {product_name1} is superior to {product_name2}. It provides {advantages1} that make it a great choice."]
+    },
+    {
+      "tag": "order_change_request",
+      "patterns": ["Can I make changes to my order?", "I need to modify my order.", "Is it possible to edit my order?"],
+      "responses": ["In some cases, order changes are possible before the order is shipped. Please provide your order number and the specific changes you would like to make, and I'll let you know if it's feasible.", "Order modifications can be accommodated if your order hasn't been shipped yet. To proceed, please share your order number and the specific changes you'd like to make."]
+    },
+    {
+      "tag": "order_change_process",
+      "patterns": ["I want to make changes to order 12345", "Please update my order with number 12345"],
+      "responses": ["I'm sorry to hear that you want to make changes to order number 12345. Let me assist you with the modification process.", "Sure, I'll help you update order number 12345. Give me a moment."]
+    },
+    {
+      "tag": "order_change_confirmation",
+      "patterns": ["Yes, please proceed with the order changes.", "Confirm the modifications to my order.", "Update my order with the requested changes."],
+      "responses": ["The requested changes to your order 12345 have been processed. If any payment adjustments are necessary, they will be handled accordingly.", "The modifications you requested for order 12345 have been processed. If there are any payment changes, we'll take care of those accordingly."]
+    },
+    {
+      "tag": "order_change_failure",
+      "patterns": ["I changed my mind, I don't want to make changes to my order.", "Actually, I'd like to keep my order as is.", "Can you cancel my order change request?"],
+      "responses": ["I apologize for any confusion. Your order change request for order 12345 has been canceled, and the order will proceed as originally placed.", "No problem! Your order change request for order 12345 has been canceled, and your order will proceed as initially requested."]
+    },
+    {
+      "tag": "shipping_options",
+      "patterns": ["What are the available shipping options?", "Do you offer express shipping?", "Can I choose the shipping method?"],
+      "responses": ["We provide various shipping options, including standard shipping, express shipping, and same-day delivery in select areas. During checkout, you can choose the preferred shipping method based on your location and urgency.", "Yes, we offer multiple shipping options to cater to different needs. You can select the shipping method during the checkout process. The available options typically include standard shipping, express shipping, and same-day delivery where applicable."]
+    },
+    {
+      "tag": "shipping_cost",
+      "patterns": ["How much does shipping cost?", "What is the shipping fee?", "Is there a charge for shipping?"],
+      "responses": ["The shipping cost varies depending on factors such as the shipping method, destination, and order value. You can view the shipping fees during the checkout process before finalizing your purchase.", "The shipping cost is determined by several factors, including the shipping method you choose, the destination, and the total order value. You'll be able to see the shipping fees displayed during the checkout process."]
+    },
+    {
+      "tag": "shipping_time",
+      "patterns": ["How long will it take to receive my order?", "When can I expect my package to arrive?", "What is the estimated delivery time?"],
+      "responses": ["The delivery time depends on the shipping method you select and the destination. During the checkout process, you'll be provided with an estimated delivery date based on your location.", "The estimated delivery time varies based on factors such as the shipping method and the destination address. When you proceed with the checkout, you'll see the estimated delivery date for your order."]
+    },
+    {
+      "tag": "shipping_status",
+      "patterns": ["Can you provide the status of my shipment?", "Where is my package?", "How can I track my order?"],
+      "responses": ["To track your order, please use the tracking number provided in the shipping confirmation email. If you're having trouble locating the tracking information, please let me know, and I'll assist you further.", "Sure! To track your order, you can use the tracking number provided in the shipping confirmation email. If you need any help or if the tracking information is not available, feel free to reach out to me."]
+    },
+    {
+      "tag": "shipping_status_info",
+      "patterns": ["According to our records, your package with tracking number 12345 is currently dispatched.", "Based on the latest update, your shipment with tracking number 12345 is in on the way.", "The tracking information for your package with number 12345 shows that it is delayed."],
+      "responses": ["According to our records, your package with tracking number {tracking_number} is currently {status}. For more detailed information, please visit the shipping carrier's website and enter the tracking number.", "Based on the latest update, your shipment with tracking number 12345 is deliverd. For more specific details, please visit the shipping carrier's website and enter the tracking number."]
+    },
+    {
+      "tag": "shipping_status_unavailable",
+      "patterns": ["I don't have any information about the status of my shipment.", "I'm unsure where my package is.", "Why can't I find the shipping status?"],
+      "responses": ["I apologize for the inconvenience. It seems that the status of your shipment is not immediately available in our system. Please contact our support team, and they'll provide you with the necessary updates.", "I'm sorry for the inconvenience. It appears that the information about the status of your shipment is not readily accessible. Please reach out to our support team, and they'll assist you with the required information."]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": ["What payment methods do you accept?", "Can I pay with Cards?", "Is cash on delivery available as a payment option?"],
+      "responses": ["We accept various payment methods, including credit cards, debit cards, PayPal, and bank transfers. During the checkout process, you can select the payment method that suits you best.", "Yes, we offer multiple payment methods to accommodate our customers' preferences. The available options usually include credit cards, debit cards, PayPal, and bank transfers."]
+    },
+    {
+      "tag": "payment_security",
+      "patterns": ["Is it safe to enter my payment information?", "How do you protect my payment details?", "What security measures are in place for payments?"],
+      "responses": ["We take the security of your payment information seriously. Our website employs industry-standard encryption protocols to protect your data. Additionally, we regularly update our security measures to ensure a safe and secure payment process.", "We prioritize the security of your payment details. Our website uses encryption and follows industry best practices to safeguard your information. Rest assured that your payment process is protected."]
+    },
+    {
+      "tag": "payment_failure",
+      "patterns": ["My payment failed. What should I do?", "Why was my payment declined?", "I'm having trouble completing the payment."],
+      "responses": ["I apologize for the inconvenience. Payment failures can occur due to various reasons. Please ensure that you have sufficient funds or contact your bank for further information. If the issue persists, please reach out to our support team for assistance.", "I'm sorry to hear about the payment failure. Common reasons for declined payments include insufficient funds, incorrect card details, or security measures by your bank. Please double-check the information provided, and if the issue persists, contact our support team for guidance."]
+    },
+    {
+      "tag": "payment_confirmation",
+      "patterns": ["I received the payment confirmation.", "I got an email confirming my payment.", "My payment went through successfully."],
+      "responses": ["That's great to hear! Once your payment is confirmed, we'll proceed with processing your order. If you have any further questions, feel free to ask.", "Excellent! Once the payment is successfully processed, we'll proceed with fulfilling your order. If you have any more questions or need assistance, please let me know."]
+    }
+
+
+
+
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
